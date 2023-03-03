@@ -49,4 +49,10 @@ public class UserResource {
         return ResponseEntity.ok().body(modelMapper.map(userService.update(userDTO), UserDTO.class));
     }
 
+    @DeleteMapping(value = ID)
+    public ResponseEntity<UserDTO> delete(@PathVariable Integer id) {
+        userService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }

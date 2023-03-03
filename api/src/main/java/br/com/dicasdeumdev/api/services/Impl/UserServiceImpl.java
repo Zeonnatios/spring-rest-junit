@@ -51,4 +51,10 @@ public class UserServiceImpl implements UserService {
             throw new DataIntegrityViolationException("Email already exists");
         }
     }
+
+    @Override
+    public void delete(Integer id) {
+        findById(id);
+        userRepository.deleteById(id);
+    }
 }
