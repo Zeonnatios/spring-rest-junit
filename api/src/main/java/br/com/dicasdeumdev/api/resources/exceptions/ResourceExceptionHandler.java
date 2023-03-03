@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 public class ResourceExceptionHandler {
 
     @ExceptionHandler(ObjectNotFoundException.class)
-    public ResponseEntity<StandardError> objectNotFound(
+    public ResponseEntity<StandardError> objectNotFoundException(
             ObjectNotFoundException exception, HttpServletRequest request) {
 
         StandardError error = new StandardError(
@@ -27,7 +27,7 @@ public class ResourceExceptionHandler {
     }
 
     @ExceptionHandler(DataIntegrityViolationException.class)
-    public ResponseEntity<StandardError> dataIntegrityViolation(
+    public ResponseEntity<StandardError> dataIntegrityViolationException(
             DataIntegrityViolationException exception, HttpServletRequest request) {
 
         StandardError error = new StandardError(
