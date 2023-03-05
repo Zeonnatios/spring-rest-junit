@@ -41,7 +41,7 @@ class UserServiceImplTest {
     private ModelMapper modelMapper;
 
     private User user;
-    private UserDTO userDTO;
+    private UserDTO userDTO = new UserDTO();
     private Optional<User> optionalUser;
 
     @BeforeEach
